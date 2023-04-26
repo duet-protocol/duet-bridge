@@ -1,0 +1,11 @@
+{
+  "name": "duet-bridge",
+  "description": "Bridge duet token family between BSC(original chain) to some EVM compatible chains",
+  "main": "index.js",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "keythereum": "^2.0.0"
+  }
+}

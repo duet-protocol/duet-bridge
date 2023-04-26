@@ -1,0 +1,4 @@
+node_modules/
+executor
+.env
+executor-key.json

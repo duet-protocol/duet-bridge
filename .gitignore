@@ -1,0 +1,11 @@
+node_modules/
+.idea/
+.DS_Store
+generated*
+.env
+node_modules/
+artifacts/
+typechain/
+coverage/
+build/
+cache/

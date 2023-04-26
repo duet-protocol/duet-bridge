@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "outDir": "dist",
+    "declaration": true,
+    "typeRoots": ["./types/", "./node_modules/@types"],
+    "types": ["node"]
+  },
+  "include": ["./deploy", "./scripts", "./test", "./typechain", "./types"],
+  "files": ["./hardhat.config.ts"]
+}

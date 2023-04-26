@@ -1,0 +1,28 @@
+[[multichain]]
+chainID = 5
+name = "Goerli"
+gateway = "<your-goerli-rpc>" # fill in your Goerli rpc provider url
+# cBridge (liquidity bridge) contract address. Executor relies on events from this
+# contract to double check and make sure funds are transfered to the destination
+# before it attempts messages on the destination chain
+cbridge = "<copy-addr-from-'Contract Addresses & RPC Info'>"
+# MessageBus contract address. Executor relies this to keep a message execution
+# history (just so you can debug or help out angry customers).
+msgbus = "<copy-addr-from-'Contract Addresses & RPC Info'>"
+blkinterval = 15 # polling interval
+blkdelay = 5 # how many blocks confirmations are required
+maxblkdelta = 5000 # max number of blocks per poll request
+
+[[multichain]]
+chainID = 97
+name = "BSC Testnet"
+gateway = "https://data-seed-prebsc-2-s3.binance.org:8545/"
+cbridge = "<copy-addr-from-'Contract Addresses & RPC Info'>"
+msgbus = "<copy-addr-from-'Contract Addresses & RPC Info'>"
+blkinterval = 3
+blkdelay = 8
+maxblkdelta = 5000
+# on some EVM chains the gas estimation can be off. the below fields
+# are added to make up for the inconsistancies.
+addgasgwei = 2 # add 2 gwei to gas price
+addgasestimateratio = 0.3 # multiply gas limit by this ratio

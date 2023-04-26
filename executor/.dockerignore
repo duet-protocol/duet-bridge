@@ -1,0 +1,6 @@
+*
+!package.json
+!pnpm-lock.yaml
+!entrypoint.js
+!config/executor.tpl.toml
+!config/cbridge.toml

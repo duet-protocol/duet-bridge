@@ -1,0 +1,33 @@
+# since we don't want the executor to execute messages that are not sent by our
+# BatchTransfer contract, the following items are added to filter only
+# the ones we care about
+[[service]]
+# Fully qualified absolute path only, "~" would not work
+signer_keystore = "/Users/patrickmao/.executor/eth-ks/signer.json"
+signer_passphrase = "<your-keystore-passphrase>"
+[[service.contracts]]
+chain_id = 5 # Goerli
+address = "<BatchTransfer-address>"
+allow_sender_groups = ["batch-transfer"]
+[[service.contracts]]
+chain_id = 97 # Bsc testnet
+address = "<BatchTransfer-address>"
+allow_sender_groups = ["batch-transfer"]
+[[service.contract_sender_groups]]
+# the name/ID of the group. service.contracts refer to a sender group in allow_sender_groups
+name = "batch-transfer"
+allow = [
+  # allow and execute messages originated from <BatchTransfer-address> on chain 1
+  { chain_id = 5, address = "<BatchTransfer-address>" },
+  # allow and execute messages originated from <BatchTransfer-address> on chain 56
+  { chain_id = 97, address = "<BatchTransfer-address>" },
+]
+
+[sgnd]
+# SGN testnet node0 grpc. executor reads available messages from this endpoint
+sgn_grpc = "https://cbridge-prod2.celer.app:9094"
+# SGN testnet gateway grpc. all tx operations to the SGN is delegated through it
+gateway_grpc = "https://cbridge-prod2.celer.app:9094"
+
+[db]
+url = "postgresql://duet:dBcoba8Mi_OMhs3Kg1Zp3A@celer-executor-7267.6wr.cockroachlabs.cloud:26257/defaultdb?sslmode=verify-full"
