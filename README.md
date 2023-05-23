@@ -6,7 +6,7 @@ chains.
 
 note: Currently, to redeem $bDUET for $DUET, it can only be transferred back to the BSC chain for redemption.
 
-## Terminologies:
+## Glossary:
 
 - **sourceChain**: the chain where token transfer from.
 - **originalChain**: the chain where token initial supplied. (for duet token family, it's BSC)

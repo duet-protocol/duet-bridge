@@ -30,4 +30,4 @@ sgn_grpc = "https://cbridge-prod2.celer.app:9094"
 gateway_grpc = "https://cbridge-prod2.celer.app:9094"
 
 [db]
-url = "postgresql://duet:dBcoba8Mi_OMhs3Kg1Zp3A@celer-executor-7267.6wr.cockroachlabs.cloud:26257/defaultdb?sslmode=verify-full"
+url = "postgresql://"
